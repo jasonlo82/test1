@@ -4,7 +4,7 @@ resource "aws_instance" "pavm" {
     #ami = "${lookup(var.pavm_payg_bun2_ami_id, var.region)}"
     availability_zone = "${var.availability_zone}"
     tenancy = "default"
-    ebs_optimized = false
+    ebs_optimized = true
     disable_api_termination = false
     instance_initiated_shutdown_behavior = "stop"
     instance_type = "${var.pavm_instance_type}"
